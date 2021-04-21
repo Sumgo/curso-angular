@@ -1,0 +1,26 @@
+<p>Listado de Héroes</p>
+
+<!-- tarea: borrar un héroe  y que aparezca el nombre abajo-->
+
+<!-- En este apartado utilizamos dentro del ngIf la condición tb else, que hará referencia al ng- template que le digamos, en nuestro ejemplo "#noBorrado" -->
+<div *ngIf= "heroeBorrado; else noBorrado" >
+    <h3 >Héroe borrado: <small>{{heroeBorrado}}</small></h3> 
+    
+</div>
+
+<ng-template #noBorrado>
+    <h3 >No ha borrado nada</h3> 
+</ng-template>
+
+<button (click)= "borrarHeroe()">
+    Borrar 
+</button>
+
+<ul>
+    <li *ngFor= "let heroe of heroes; let i = index;">
+        {{i+1}} -  {{heroe}}
+    </li>
+</ul>
+
+
+
