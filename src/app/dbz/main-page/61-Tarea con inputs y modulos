@@ -1,0 +1,8 @@
+EJERCICIO
+1. nuevo componente llamamdo Agregar.component que va a tener desde:
+2.   <h3>Agregar</h3> hasta el </form>
+3. Mover el nuevo. y agregar2()
+4. @Input personajes
+5. @Input nuevo desde el componente padre
+6.<app-agregar [nuevo] = "nuevo"></app-agregar>
+7.Mostrarlo en consola y si puedes en listado de personajes 

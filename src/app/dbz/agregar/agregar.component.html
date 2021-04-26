@@ -1,0 +1,38 @@
+<h3>Agregar</h3>  <h2>{{nuevo.nombre}}</h2>
+<hr>
+
+<!-- VAMOS A ENVIAR LA INFO DEL FORMULARIO DE DOS MANERAS DISTINTAS:
+A. MEDIANTE EVENTOS DE JAVASCRIPT DONDE EVITARÁ QU ERECARGUE LA PÁGINA COMPLETA EN LUGAR DE SOLO EL ELEMENTO QUE NECESITAMOS, EN ESTE CASO EL FORM
+-->
+<!-- <form (submit)= "agregar($event)">
+    <input placeholder="Nombre" type="text"/>
+    <input placeholder="Poder" type="text"/>
+    <button>Agregar</button>
+
+</form> -->
+
+
+<!-- MEDIANTE LAS POSIBILIDADES QUE NOS PROPORCIONA ANGULAR COMO FRAMEWORK (ngsubmit)  -->
+
+<form (ngSubmit)= "agregar2()">
+    <input 
+    placeholder="Nombre" 
+    type="text"
+    name="nombre"
+    [(ngModel)] = "nuevo.nombre"
+    />
+
+    <!-- Además de utilizar la opción de ngModel qu enos da Angular, recuerda que TS nos daba esta opción
+         [value] = "nuevo.nombre"
+    (input) = "cambiarNombre($event)" -->
+
+    <input 
+    placeholder="Poder" 
+    type="text"
+    name="poder"
+    [(ngModel)] = "nuevo.poder"
+    />
+
+    <button>Agregar</button>
+
+</form>
